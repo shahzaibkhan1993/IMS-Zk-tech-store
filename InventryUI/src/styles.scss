@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;background-color: #eee; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #eee;}
+em{
+    color: #e71515;
+    font-weight: bold;
+}
+.ng-invalid.ng-touched{
+    border-color: red;
+}
+.data-massage{
+    font-size: 1rem;
+}
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+.card-shadow {
+    box-shadow: 4px 3px 20px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  .title-background-0 {
+    background-color: #ffc107; /* Light Red */
+  }
+  
+  .title-background-1 {
+    background-color: #17a2b8; /* Light Green */
+  }
+  
+  .title-background-2 {
+    background-color: #dc3545; /* Light Blue */
+  }
+  
+  .title-background-3 {
+    background-color: #28a745; /* Light Yellow */
+  }
+  .signinbtn{
+  
+    
+    height: 58px;
+    width: 90%;
+    margin: 25px;
+    
+    bottom: 10px;
+    color:white;
+    border: none;
+    border-radius: 3px;
+    background-color: #f44336;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(244, 67, 54, .4);
+  }
+  .signinbtn:hover{
+  
+    
+    height: 58px;
+    width: 90%;
+    margin: 25px;
+    
+    bottom: 10px;
+    color:white;
+    border: none;
+    border-radius: 3px;
+    background-color: #ff2515;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(244, 67, 54, .4);
+  }
+  /* Add more styles if you have more than four cards */
+  

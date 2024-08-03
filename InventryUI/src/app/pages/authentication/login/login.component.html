@@ -1,0 +1,52 @@
+<div class="blank-layout-container justify-content-center align-items-center" style="background-color: #F5F5F5;">
+  <div class="position-relative row w-100 h-100 bg-gredient justify-content-center">
+    <div class="col-lg-2 d-flex align-items-center" style="width: 60%;">
+      
+        <mat-card class="boxed-auth" style=" border-radius: 10px; background: #FFF; box-shadow: 2px 2px 29px 11px rgba(100, 100, 111, 0.2);">
+          <mat-card-content class="p-32" >
+            <div class="text-center">
+              <a>
+                <img width="60%" height="60%" src="../../../../assets/images/logos/logo-transp.png" class="align-middle m-2" alt="logo" />
+              </a>
+            </div>
+  
+            <div *ngIf="showError" class="error-container">
+              <!-- <mat-error class="error-message">{{errorMessage}}</mat-error> -->
+              <mat-error class="error-message">{{usererrormsg}}</mat-error>
+            </div>
+            <mat-card-title>Log in</mat-card-title>
+            <form class="m-t-30" [formGroup]="loginForm" autocomplete="off" novalidate
+              (ngSubmit)="loginUser(loginForm.value)">
+  
+              <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Email</mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <input matInput type="text" id="username" formControlName="username" class="form-control" />
+              </mat-form-field>
+  
+              <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Password</mat-label>
+              <mat-form-field appearance="outline" class="w-100 position-relative" color="primary">
+                <div class="password-container">
+                  <input matInput [type]="hidePassword ? 'password' : 'text'" id="password" formControlName="password"
+                    class="form-control" />
+                  <div class="password-toggle-button" (click)="togglePasswordVisibility()">
+                    <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </div>
+                </div>
+              </mat-form-field>
+  
+              <div class="d-flex align-items-center m-b-12">
+                <a [routerLink]="['/authentication/forgot-password']"
+                  class="text-primary f-w-600 text-decoration-none m-l-auto f-s-14">Forgot Password ?</a>
+              </div>
+  
+              <button  class=" signinbtn" type="submit" [disabled]="!loginForm.valid">
+                Sign In
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      
+     
+    </div>
+  </div>
+</div>
